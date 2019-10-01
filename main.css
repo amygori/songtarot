@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
+
+body {
+  background: url('./bird-in-snow.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #4E3647;
+  font-family: 'Special Elite', 'Courier New', Courier, monospace;
+}
+
+.main-container {
+  width: 960px;
+}
+
+.heading {
+  width: 50%;
+  float: left;
+}
+
+.colors {
+  color: #6a4961;
+}
+
+h1 {
+  font-weight: 600px;
+  font-size: 100px;
+  top: 100px;
+}
+
+ul.social-row {
+  list-style-type: none;
+  margin-top: 50px;
+  width: 50%;
+  float: left;
+}
+
+.social-icon i {
+  float: left;
+  font-size: 48px;
+}
+
+.contact {
+  margin-top: 75px;
+  width: 50%;
+  float: left;
+  font-size: 48px;
+}
