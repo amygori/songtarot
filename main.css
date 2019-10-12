@@ -1,34 +1,77 @@
 @import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
 :root {
   --text-color: #4E3647;
+  --link-color: #5F8A88;
+  --link-active: #79565F;
+  --extra-color:  #6a4961;
+}
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-  background: url('./bird-in-snow.jpg') no-repeat center center fixed;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url('./bird-in-snow.jpg') no-repeat center center fixed;
-     ;
-  background-size: cover;
   color: var(--text-color);
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
 }
 
+/* LAYOUT  */
 .main-container {
-  display: grid;
-  grid-template-columns: 30% auto 30%;
-  grid-template-rows: 25% auto 25%;
-  width: 100%;
+  flex: 1 0 auto;
 }
 
-.heading {
-  width: 50%;
-  float: left;
+.footer {
+  flex-shrink: 0;
+  padding: 50px;
 }
 
-.colors {
-  color: #6a4961;
+.default-background {
+  background: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url('./bird-in-snow.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
+
+.about-background {
+  background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url('./cards.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.nav-link {
+  display: block;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  font-size: 24px;
+  padding: 0 10px;
+}
+
+.content-box {
+  /* TODO: delete; for dev only */
+  border: 2px solid green;
+}
+
+.content-box>p {
+  /* TODO: delete; for dev only */
+  border: 2px dotted purple;
+}
+
+/* ELEMENTS */
 
 h1 {
   font-weight: 600px;
@@ -36,16 +79,30 @@ h1 {
   top: 100px;
 }
 
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: var(--link-active);
+}
+
 i {
   float: left;
   font-size: 48px;
-  clear: left;
+  padding: 0 10px;
 }
 
-.contact {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: row3-start;
-  grid-row-end: 3;
-  font-size: 48px;
+ /* MEDIA QUERIES */
+
+@media(max-width: 576px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+@media(max-width: 320px) {
+  h1 {
+    font-size: 36px;
+  }
 }
