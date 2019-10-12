@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
 :root {
-  --text-color: #4E3647;
+  --header-color: #4E3647;
   --link-color: #5F8A88;
   --link-active: #79565F;
   --extra-color:  #6a4961;
+  --onyx: #353A47;
+  --snow: #FCFAF7;
 }
 
 /* GLOBAL */
@@ -16,11 +18,13 @@ html {
 }
 
 body {
-  color: var(--text-color);
+  color: var(--header-color);
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
   display: flex;
   height: 100vh;
+  letter-spacing: 1px;
   flex-direction: column;
+  margin: 0;
 }
 
 /* LAYOUT  */
@@ -30,7 +34,13 @@ body {
 
 .footer {
   flex-shrink: 0;
-  padding: 50px;
+  padding: 12px;
+  background-color: var(--onyx);
+  color: var(--snow);
+}
+
+.footer a {
+  color: var(--snow);
 }
 
 .default-background {
@@ -49,7 +59,7 @@ body {
   list-style-type: none;
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
+  flex-direction: column;
   width: 60%;
 }
 
@@ -57,26 +67,27 @@ body {
   display: block;
   flex: 1 1 auto;
   justify-content: flex-start;
-  font-size: 24px;
-  padding: 0 10px;
+  font-size: 21px;
+  padding: 7px 0;
 }
 
-.content-box {
+/* .content-box {
   /* TODO: delete; for dev only */
-  border: 2px solid green;
+  /* border: 2px solid green;
 }
 
-.content-box>p {
+.content-box>p { */
   /* TODO: delete; for dev only */
-  border: 2px dotted purple;
-}
+  /* border: 2px dotted purple;
+} */
 
 /* ELEMENTS */
 
 h1 {
   font-weight: 600px;
   font-size: 100px;
-  top: 100px;
+  letter-spacing: 3px;
+  margin: 65px 0 0 20px;
 }
 
 a {

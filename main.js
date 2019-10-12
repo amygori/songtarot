@@ -7,7 +7,6 @@ class Page {
 
     this.contentText = {
       aboutMe: 'Hello, this is about Adam',
-      contact: 'reading@songtarot.com',
       aboutCards: 'Well this is text about the cards'
     }
 
@@ -15,8 +14,6 @@ class Page {
       switch (link) {
         case 'nav-about-me':
           return this.contentText.aboutMe;
-        case 'nav-contact':
-          return this.contentText.contact;
         case 'nav-about-cards':
           return this.contentText.aboutCards;
         default:
