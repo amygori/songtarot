@@ -24,6 +24,7 @@ body {
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
   display: flex;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   letter-spacing: 1px;
   flex-direction: column;
   margin: 0;

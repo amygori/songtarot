@@ -20,12 +20,19 @@ class Page {
           return '';
       }
     }
+
+    this.setViewportHeight = () => {
+      // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+      // First we get the viewport height and we multiply it by 1% to get a value for a vh unit
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
   }
 }
 
 window.onload = () => {
   const page = new Page();
-  console.log(page.getText())
   page.navLinks.forEach( (link) => {
     link.addEventListener('click', (e) => {
       let clickedLinkId = e.target.id;
@@ -40,4 +47,6 @@ window.onload = () => {
       }
     });
   });
+
+  page.setViewportHeight();
 }
