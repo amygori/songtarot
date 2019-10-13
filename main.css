@@ -53,7 +53,8 @@ body {
 
 .instagram span {
   display: inline-block;
-  margin: 18px 0 0 10px;
+  margin: 18px 0 0;
+  clear: right;
 }
 
 .email {
@@ -118,6 +119,7 @@ a:hover, a:active {
 }
 
 i {
+  float: left;
   font-size: 48px;
   padding: 0 10px;
 }
@@ -129,12 +131,22 @@ i {
     font-size: 48px;
   }
 }
-@media(max-width: 320px) {
+@media(max-width: 380px) {
   h1 {
     font-size: 36px;
   }
 
   i {
     font-size: 24px;
+  }
+
+  .email {
+    margin-top: 42px;
+  }
+}
+
+@media(max-width: 420px) {
+  i {
+    font-size: 36px;
   }
 }
