@@ -5,7 +5,8 @@
   --link-active: #79565F;
   --extra-color:  #6a4961;
   --onyx: #353A47;
-  --snow: #FCFAF7;
+  --footer-link-hover: #FCFAF7;
+  --footer-text: #99B4B3;
 }
 
 /* GLOBAL */
@@ -36,13 +37,27 @@ body {
   flex-shrink: 0;
   padding: 12px;
   background-color: var(--onyx);
-  color: var(--snow);
+  color: var(--footer-text);
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer a {
-  color: var(--snow);
+  color: var(--footer-text);
 }
 
+.footer a:hover, a:active {
+  color: var(--footer-link-hover);
+}
+
+.instagram span {
+  display: inline-block;
+  margin: 18px 0 0 10px;
+}
+
+.email {
+  margin-top: 18px;
+}
 .default-background {
   background: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
     url('./bird-in-snow.jpg') no-repeat center center fixed;
@@ -114,6 +129,10 @@ i {
 }
 @media(max-width: 320px) {
   h1 {
+    font-size: 36px;
+  }
+
+  i {
     font-size: 36px;
   }
 }
