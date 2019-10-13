@@ -6,14 +6,14 @@ class Page {
     this.contentMountPoint = document.querySelector('.content-box');
 
     this.contentText = {
-      aboutMe: 'Hello, this is about Adam',
-      aboutCards: 'Well this is text about the cards'
+      about: 'I keep readings simple. You ask a question. I draw the cards. I look at the visual elements in the cards to find answers. Everything I say is verifiable in the cards. We can point to it. You don’t have to take my word for anything. I send you a photo of the cards and the reading in writing. You ask a clarifying question. I respond. $30.',
+      aboutCards: 'I use Marseilles Tarot, Sibilla, Lenormandon, and playing cards. The cards are made of card stock. They are flat, nothing but air behind them. There’s nothing magic in them. The question that you ask is the only magical element. We can think of a question as a line looking for its own source, and an answer as the line closing itself, a circle. Call and response. It’s that simple. Don’t ask me how it works. Who knows?'
     }
 
     this.getText = (link) => {
       switch (link) {
-        case 'nav-about-me':
-          return this.contentText.aboutMe;
+        case 'nav-about':
+          return this.contentText.about;
         case 'nav-about-cards':
           return this.contentText.aboutCards;
         default:
