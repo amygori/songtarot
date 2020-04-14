@@ -3,7 +3,7 @@
   --header-color: #4E3647;
   --link-color: #5F8A88;
   --link-active: #79565F;
-  --extra-color:  #6a4961;
+  --extra-color: #6a4961;
   --onyx: #353A47;
   --footer-link-hover: #FCFAF7;
   --footer-text: #99b4b3;
@@ -11,6 +11,7 @@
 }
 
 /* GLOBAL */
+
 * {
   box-sizing: border-box;
 }
@@ -31,6 +32,7 @@ body {
 }
 
 /* LAYOUT  */
+
 .main-container {
   flex: 1 0 auto;
 }
@@ -61,15 +63,14 @@ body {
 .email {
   margin-top: 18px;
 }
+
 .default-background {
-  background: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url('./bird-in-snow.jpg') no-repeat center center fixed;
+  background: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/bird-in-snow.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
 .about-background {
-  background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
-    url('./cards.jpg') no-repeat center center fixed;
+  background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('./images/cards.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -93,12 +94,30 @@ body {
   margin: 0 40px;
 }
 
-.content-box>p {
+.content-box>div {
   background-color: var(--text-background);
   border-radius: 4px;
   line-height: 24px;
   margin: 10px;
   padding: 10px;
+}
+
+.card-layout {
+  display: flex;
+}
+
+.card-layout>div {
+  justify-content: space-around;
+}
+
+.card-image {
+  max-width: 450px;
+  padding: 20px;
+}
+
+.card-descriptions {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ELEMENTS */
@@ -125,22 +144,25 @@ i {
   padding: 0 10px;
 }
 
- /* MEDIA QUERIES */
+img {
+  border-radius: 4px;
+}
+
+/* MEDIA QUERIES */
 
 @media(max-width: 576px) {
   h1 {
     font-size: 48px;
   }
 }
+
 @media(max-width: 380px) {
   h1 {
     font-size: 36px;
   }
-
   i {
     font-size: 24px;
   }
-
   .email {
     margin-top: 42px;
   }
