@@ -59,9 +59,6 @@ class Page {
     this.createNavMenu = () => {
       this.navLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
-          console.log(e)
-          console.log(e.currentTarget)
-          console.log(e.target)
           this.handleContentChange(e)
         })
       })
