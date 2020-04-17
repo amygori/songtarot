@@ -6,20 +6,8 @@ const content = `
   Elm tree, perhaps a survivor of the epidemic that killed most elms. It seems a fitting entity to turn to.</p>
 <p>I asked what it, or the trees, had to tell us right now in regard to all that is happening.</p>
 <p>Here's what we got.</p>
-<div class='card-layout'>
-  <img src="images/pandemic-cards.jpg" class='card-image'>
-  <div class='card-descriptions'>
-    <div>
-      <p>Three of Spades (Traps)</p>
-      <p>Q of Spades (Widow)</p>
-      <p>Ace of Hearts (A Sweet Card)</p>
-    </div>
-    <div>
-      <p>Q of Diamonds (Angry Woman)</p>
-      <p>Q of Hearts (Tenderness)</p>
-      <p>Nine of Spades (Death)</p>
-    </div>
-  </div>
+<div class='card-image'>
+  <img src="images/pandemic-cards.jpg">
 </div>
 <p>What first stuck me was the fact that we see nearly every queen in the deck. And I think we can say that the Ace of
   Hearts is a stand in for a queen. So we have four queens. Six cards. Four Queens. This is a picture of a ruling female
