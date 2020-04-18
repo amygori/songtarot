@@ -1,4 +1,5 @@
 import content from './writing-content.js'
+import Router from './router.js'
 
 class Page {
   constructor () {
@@ -7,9 +8,9 @@ class Page {
     this.navLinks = document.querySelectorAll('.nav-link')
     this.contentMountPoint = document.querySelector('.content-box')
     this.contentText = {
-      about: 'I keep readings simple. You ask a question. I draw the cards. I look at the visual elements in the cards to find answers. Everything I say is verifiable in the cards. We can point to it. You don’t have to take my word for anything. I send you a photo of the cards and the reading in writing. You ask a clarifying question. I respond. $30.',
-      aboutCards: 'I use Marseilles Tarot, Sibilla, Lenormandon, and playing cards. The cards are made of card stock. They are flat, nothing but air behind them. There’s nothing magic in them. The question that you ask is the magical element. We can think of a question as a line looking for its own source, and an answer as the line closing itself, a circle. Call and response. It’s that simple. Don’t ask me how it works. Who knows?',
-      writing: content
+      about: content.about,
+      aboutCards: content.cards,
+      writing: content.writing
     }
 
     this.setup = () => {
@@ -69,4 +70,6 @@ class Page {
 window.onload = () => {
   const page = new Page()
   page.setup()
+  const router = new Router(window.url)
+  router.route()
 }
